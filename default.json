@@ -48,6 +48,29 @@
     },
     {
       "automerge": true,
+      "automergeSchedule": [
+        "at any time"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "pinDigest",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump",
+        "replacement"
+      ],
+      "groupName": "dnbhq",
+      "ignoreTests": true,
+      "matchPackageNames": [
+        "/@dnbhq/*/"
+      ]
+    },
+    {
+      "automerge": true,
       "matchPackageNames": [
         "/lint/",
         "/prettier/",
