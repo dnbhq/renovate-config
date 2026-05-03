@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "@davidsneighbour/prettier-config": "2025.2.3",
-    "@davidsneighbour/release-config": "2025.2.3"
+    "@davidsneighbour/release-config": "2026.0.5"
   }
 }
