@@ -13,7 +13,7 @@
   "homepage": "https://github.com/dnbhq/renovate-config",
   "scripts": {
     "release": "release-it",
-    "verify": "export RENOVATE_CONFIG_FILE=default.json && npx --yes --package renovate -- renovate-config-validator"
+    "verify": "npx --yes --package renovate -- renovate-config-validator --strict default.json"
   },
   "devDependencies": {
     "@release-it/conventional-changelog": "11.0.0",
