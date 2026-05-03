@@ -1,24 +1,22 @@
 {
-  "name": "@davidsneighbour/renovate-config",
+  "name": "@dnbhq/renovate-config",
   "version": "1.2025.3",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidsneighbour/renovate-config.git"
+    "url": "git+https://github.com/dnbhq/renovate-config.git"
   },
   "author": "Patrick Kollitsch <patrick@davids-neighbour.com>",
   "bugs": {
-    "url": "https://github.com/davidsneighbour/renovate-config/issues"
+    "url": "https://github.com/dnbhq/renovate-config/issues"
   },
-  "homepage": "https://github.com/davidsneighbour/renovate-config",
+  "homepage": "https://github.com/dnbhq/renovate-config",
   "scripts": {
-    "release": "commit-and-tag-version --sign --release-as patch -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "release:minor": "commit-and-tag-version --sign --release-as minor -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/repo/release/postrelease",
-    "update": "npm-check-updates -u && npm install && git add package*",
+    "release": "release-it",
     "verify": "export RENOVATE_CONFIG_FILE=default.json && npx --yes --package renovate -- renovate-config-validator"
   },
-  "dependencies": {
-    "@davidsneighbour/prettier-config": "2025.2.3",
-    "@davidsneighbour/release-config": "2025.2.3"
+  "devDependencies": {
+    "@release-it/conventional-changelog": "11.0.0",
+    "release-it": "20.0.1"
   }
 }
