@@ -22,7 +22,7 @@ This preset provides:
 - `config:best-practices` base preset
 - Semantic commit type set to `chore`
 - Dependency Dashboard disabled
-- Scheduled updates on Friday and Saturday nights in the Asia/Bangkok timezone
+- Scheduled updates on Friday and Saturday from 00:00-04:59 and 21:00-23:59 in the Asia/Bangkok timezone
 - Docker image digest pinning, keeping tags as the intended update stream
 - GitHub Actions pinning to full commit SHAs while preserving Renovate's version comments
 - Pinned npm `devDependencies`
@@ -41,7 +41,8 @@ See [`default.json`](./default.json) for full details.
 
 Releases are managed with [`release-it`](https://github.com/release-it/release-it) and [`@release-it/conventional-changelog`](https://github.com/release-it/conventional-changelog):
 
-- `npm run release` → patch release
-- `npm run release:minor` → minor release
+- `npm run release` → recommended version bump from conventional commits
+- `npm run release:minor` → force a minor release
+- `npm run release:major` → force a major release
 
-The process updates `CHANGELOG.md`, creates a signed Git tag, and creates a GitHub release.
+The process updates the package version and `CHANGELOG.md`, creates a signed Git tag, and creates a GitHub release when `GITHUB_TOKEN` is available. npm publication is disabled.
