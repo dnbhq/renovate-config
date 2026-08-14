@@ -16,7 +16,7 @@
     "verify": "npx --yes --package renovate -- renovate-config-validator --strict default.json"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "11.0.0",
-    "release-it": "20.0.1"
+    "@release-it/conventional-changelog": "12.0.0",
+    "release-it": "21.0.2"
   }
 }
